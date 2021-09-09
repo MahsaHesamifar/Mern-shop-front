@@ -1,0 +1,38 @@
+:root {
+}
+
+[data-theme-palette="light"] {
+  // background:
+  --color-0: white;
+  --color-1: whitesmoke;
+  --color-2: #94bcbc;
+  --color-3: #349fa4;
+  --color-4: #dc9779;
+  --color-5: black;
+  --color-6: #373a36;
+  --color-7: #eed5d0;
+  --color-8: #707070;
+  // color:
+}
+[data-theme-palette="dim"] {
+  --color-0: white;
+  --color-1: whitesmoke;
+  --color-2: #425664;
+  --color-3: #32424d;
+  --color-4: #c6ad8f;
+  --color-5: black;
+  --color-6: #373a36;
+  --color-7: #fdad78;
+  --color-8: #707070;
+}
+[data-theme-palette="dark"] {
+  --color-0: #5b819d;
+  --color-1: #425664;
+  --color-2: rgb(34, 34, 34);
+  --color-3: rgb(43, 43, 43);
+  --color-4: #fdad78;
+  --color-5: black;
+  --color-6: #373a36;
+  --color-7: #c6ad8f;
+  --color-8: #707070;
+}

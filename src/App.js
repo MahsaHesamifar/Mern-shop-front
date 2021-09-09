@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Nav from "./Components/Nav/Nav";
+import Home from "./Components/Home/Home";
+import Toolbar from "./Components/Toolbar/Toolbar";
+import "./Styles/App.scss";
 
-function App() {
+const App = () => {
+  const [theme, setTheme] = useState({
+    palette: "light",
+  });
+  const { palette } = theme;
+  const themeHandler = event => {
+    const { name, value } = event.target;
+    setTheme(prevState => ({ ...prevState, [name]: value }));
+    // console.log("theme", theme);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container palette" data-theme-palette={palette}>
+      <div className="box-shadow">
+        <Nav />
+        <Toolbar themeHandler={themeHandler} theme={theme} />
+      </div>
+
+      <div className="pages">
+        <Home />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
